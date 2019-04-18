@@ -22,6 +22,8 @@
   * Fixed wrong units in VehiclePhysicsControl's center of mass
   * Several optimizations to the RPC server, now supports a bigger load of async messages
   * Exposed 'is_invincible' for pedestrians
+  * Physics:
+    - Added Friction Trigger Boxes for simulating, for example, slippery surfaces in any region of the map defined by users.
 
 ## CARLA 0.9.5
 
