@@ -83,10 +83,12 @@ try:
 except IndexError:
     pass
 
+print(sys.path)
+
 import carla
 from carla import ColorConverter as cc
-from agents.navigation.roaming_agent import RoamingAgent
-from agents.navigation.basic_agent import BasicAgent
+from navigation.roaming_agent import RoamingAgent
+from navigation.basic_agent import BasicAgent
 
 
 # ==============================================================================
