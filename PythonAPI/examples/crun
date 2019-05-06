@@ -1,0 +1,29 @@
+#!/bin/bash
+
+trap ctrl_c INT
+
+function ctrl_c() {
+        echo "** Trapped CTRL-C, killing $carla"
+        kill $carla
+        exit 0
+}
+
+function wait_for_server() {
+    if grep "up for play" "/tmp/carlalog"; then
+        echo "Server listens, running [$@]"
+        return 0
+    else
+        echo -n "."
+        sleep 1
+        return 1
+    fi
+}
+
+$CARLA_EXEC /Game/Carla/Maps/Town05 -quality-level=Low >/tmp/carlalog 2>&1 &
+carla=$!
+echo -n "Waiting on server to run"
+wait_for_server
+while [ $? -ne 0 ]; do
+    wait_for_server
+done
+python3 $@
