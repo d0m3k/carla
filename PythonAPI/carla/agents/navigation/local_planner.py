@@ -13,6 +13,8 @@ from collections import deque
 import random
 import math
 
+from carla import Color
+
 import carla
 from navigation.controller import VehiclePIDController
 from tools.misc import distance_vehicle, draw_waypoints
@@ -182,7 +184,10 @@ class LocalPlanner(object):
 
     def set_global_plan(self, current_plan):
         self._waypoints_queue.clear()
+        print(current_plan)
         for elem in current_plan:
+            print("%s" % elem[0])
+            draw_waypoints(self._vehicle.get_world(), [elem[0]], self._vehicle.get_location().z + 1.0, Color(92, 53, 102), 10000)
             self._waypoints_queue.append(elem)
         self._target_road_option = RoadOption.LANEFOLLOW
         self._global_plan = True

@@ -51,7 +51,6 @@ class PedestrianAgent(Agent):
         This method creates a list of waypoints from agent's position to destination location
         based on the route returned by the global router
         """
-
         start_waypoint = self._map.get_waypoint(self._vehicle.get_location())
         end_waypoint = self._map.get_waypoint(
             carla.Location(location[0], location[1], location[2]), lane_type=carla.LaneType.Sidewalk)
