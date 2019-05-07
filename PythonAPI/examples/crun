@@ -10,6 +10,7 @@ function ctrl_c() {
 
 function wait_for_server() {
     if grep "up for play" "/tmp/carlalog"; then
+        echo
         echo "Server listens, running [$@]"
         return 0
     else
@@ -19,6 +20,7 @@ function wait_for_server() {
     fi
 }
 
+lsof -t -i:2000 && kill -9 `lsof -t -i:2000`
 $CARLA_EXEC /Game/Carla/Maps/Town05 -quality-level=Low >/tmp/carlalog 2>&1 &
 carla=$!
 echo -n "Waiting on server to run"

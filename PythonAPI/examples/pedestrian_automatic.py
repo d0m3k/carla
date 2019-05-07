@@ -294,10 +294,10 @@ class KeyboardControl(object):
                 if sum(keys) > 0:
                     self._parse_vehicle_keys(keys, clock.get_time())
                     self._control.reverse = self._control.gear < 0
-                    world.player.apply_control(self._control)
+                    # world.player.apply_control(self._control)
             elif isinstance(self._control, carla.WalkerControl):
                 self._parse_walker_keys(pygame.key.get_pressed(), clock.get_time())
-                world.player.apply_control(self._control)
+                # world.player.apply_control(self._control)
 
     def _parse_vehicle_keys(self, keys, milliseconds):
         self._control.throttle = 1.0 if keys[K_UP] or keys[K_w] else 0.0
@@ -728,9 +728,25 @@ def game_loop(args):
     pygame.font.init()
     world = None
 
-    def convert_control(control):
+    # let's just convert control from vehicle to pedestrian on last possible step, to reuse CARLA-based logic where possible
+    def convert_control(control, world):
+        STEER_MULTIP = 14
+
+        # throttle=1, steer=0.283796, brake=0, hand_brake=False, reverse=False, manual_gear_shift=False, gear=0
+        c = world.player.get_control()
         print("%s" % control)
-        return carla.WalkerControl()
+        if control.brake>0 or control.hand_brake:
+            c.speed = 0
+        else:
+            c.speed = control.throttle
+        c.speed = 2.778
+        # if control.reverse:
+        #     c.speed = -c.speed
+        transform = world.player.get_transform()
+        player_rotation = transform.rotation.yaw + control.steer*STEER_MULTIP
+
+        c.direction = carla.Rotation(0, player_rotation, 0).get_forward_vector()
+        return c
 
     try:
         client = carla.Client(args.host, args.port)
@@ -765,8 +781,8 @@ def game_loop(args):
             world.tick(clock)
             world.render(display)
             pygame.display.flip()
-            control = convert_control(agent.run_step())
-            control.manual_gear_shift = False
+            control = convert_control(agent.run_step(), world)
+            print("%s" % control)
             world.player.apply_control(control)
 
     finally:
