@@ -11,6 +11,7 @@
 from enum import Enum
 from collections import deque
 import random
+import math
 
 import carla
 from navigation.controller import VehiclePIDController
@@ -185,6 +186,67 @@ class LocalPlanner(object):
             self._waypoints_queue.append(elem)
         self._target_road_option = RoadOption.LANEFOLLOW
         self._global_plan = True
+
+    def angle(self, walkside):
+        location = self._vehicle.get_location()
+        rotation = walkside.transform.location
+        print("%s" % rotation)
+    
+        return math.degrees(math.atan2(rotation.y-location.y, rotation.x-location.x))
+
+    def get_walker_waypoint(self, debug=True):
+
+        if not self._global_plan and len(self._waypoints_queue) < int(self._waypoints_queue.maxlen * 0.5):
+            self._compute_next_waypoints(k=100)
+
+        if len(self._waypoints_queue) == 0:
+            control = self._vehicle.get_control()
+            control.speed = 0
+
+            return control
+
+
+        if not self._global_plan and len(self._waypoints_queue) < int(self._waypoints_queue.maxlen * 0.5):
+            self._compute_next_waypoints(k=100)
+        if not self._waypoint_buffer:
+            for i in range(self._buffer_size):
+                if self._waypoints_queue:
+                    self._waypoint_buffer.append(
+                        self._waypoints_queue.popleft())
+                else:
+                    break
+
+        self._current_waypoint = self._map.get_waypoint(self._vehicle.get_location())
+        # target waypoint
+        self.target_waypoint, self._target_road_option = self._waypoint_buffer[0]
+
+        control = self._vehicle.get_control()
+
+        control.speed = 2.778
+        # if control.reverse:
+        #     c.speed = -c.speed
+        transform = self._vehicle.get_transform()
+        print("%s" % self.target_waypoint)
+        player_rotation = self.angle(self.target_waypoint)
+
+        control.direction = carla.Rotation(0, player_rotation, 0).get_forward_vector()
+
+        # purge the queue of obsolete waypoints
+        max_index = -1
+
+        for i, (waypoint, _) in enumerate(self._waypoint_buffer):
+            if distance_vehicle(
+                    waypoint, transform) < self._min_distance:
+                max_index = i
+        if max_index >= 0:
+            for i in range(max_index + 1):
+                self._waypoint_buffer.popleft()
+
+        if debug:
+            draw_waypoints(self._vehicle.get_world(), [self.target_waypoint], self._vehicle.get_location().z + 1.0)
+
+        return control
+        
 
     def run_step(self, debug=True):
         """

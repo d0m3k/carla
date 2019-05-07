@@ -730,7 +730,6 @@ def game_loop(args):
 
     # let's just convert control from vehicle to pedestrian on last possible step, to reuse CARLA-based logic where possible
     def convert_control(control, world):
-        STEER_MULTIP = 14
 
         # throttle=1, steer=0.283796, brake=0, hand_brake=False, reverse=False, manual_gear_shift=False, gear=0
         c = world.player.get_control()
@@ -781,9 +780,8 @@ def game_loop(args):
             world.tick(clock)
             world.render(display)
             pygame.display.flip()
-            control = convert_control(agent.run_step(), world)
-            print("%s" % control)
-            world.player.apply_control(control)
+            # control = convert_control(agent.run_step(), world)
+            world.player.apply_control(agent.run_step())
 
     finally:
         if world is not None:
