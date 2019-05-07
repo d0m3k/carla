@@ -195,7 +195,6 @@ class LocalPlanner(object):
     def angle(self, walkside):
         location = self._vehicle.get_location()
         rotation = walkside.transform.location
-        print("%s" % rotation)
     
         return math.degrees(math.atan2(rotation.y-location.y, rotation.x-location.x))
 
@@ -231,7 +230,6 @@ class LocalPlanner(object):
         # if control.reverse:
         #     c.speed = -c.speed
         transform = self._vehicle.get_transform()
-        print("%s" % self.target_waypoint)
         player_rotation = self.angle(self.target_waypoint)
 
         control.direction = carla.Rotation(0, player_rotation, 0).get_forward_vector()

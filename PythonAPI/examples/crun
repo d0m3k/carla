@@ -3,8 +3,8 @@
 trap ctrl_c INT
 
 function ctrl_c() {
-        echo "** Trapped CTRL-C, killing $carla"
-        kill $carla
+        echo "** Killing" `lsof -t -i:2000`
+        lsof -t -i:2000 && kill -9 `lsof -t -i:2000`
         exit 0
 }
 
@@ -22,10 +22,11 @@ function wait_for_server() {
 
 lsof -t -i:2000 && kill -9 `lsof -t -i:2000`
 $CARLA_EXEC /Game/Carla/Maps/Town05 -quality-level=Low >/tmp/carlalog 2>&1 &
-carla=$!
 echo -n "Waiting on server to run"
 wait_for_server
 while [ $? -ne 0 ]; do
     wait_for_server
 done
+
+trap ctrl_c ERR
 python3 $@

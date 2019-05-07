@@ -1,0 +1,398 @@
+[
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '0.882', 'y': '-7.602', 'z': '0.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '0.882', 'y': '-7.602', 'z': '0.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '13965.688', 'y': '56930.223', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '13965.688', 'y': '56930.223', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '16430.223', 'y': '42964.531', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '16430.223', 'y': '42964.531', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '16430.223', 'y': '43786.043', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '16430.223', 'y': '43786.043', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '16430.223', 'y': '44607.555', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '16430.223', 'y': '44607.555', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '16430.223', 'y': '45429.066', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '16430.223', 'y': '45429.066', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '16430.223', 'y': '46250.578', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '16430.223', 'y': '46250.578', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '16430.223', 'y': '47072.090', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '16430.223', 'y': '47072.090', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '16430.223', 'y': '47893.602', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '16430.223', 'y': '47893.602', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '16430.223', 'y': '48715.109', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '16430.223', 'y': '48715.109', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '16430.223', 'y': '49536.621', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '16430.223', 'y': '49536.621', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '16430.223', 'y': '50358.133', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '16430.223', 'y': '50358.133', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '16430.223', 'y': '51179.645', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '16430.223', 'y': '51179.645', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '16430.223', 'y': '52001.156', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '16430.223', 'y': '52001.156', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '16430.223', 'y': '52822.668', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '16430.223', 'y': '52822.668', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '16430.223', 'y': '53644.180', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '16430.223', 'y': '53644.180', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '16430.223', 'y': '54465.688', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '16430.223', 'y': '54465.688', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '2464.533', 'y': '40500.000', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '2464.533', 'y': '40500.000', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '3286.044', 'y': '40500.000', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '3286.044', 'y': '40500.000', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '4107.556', 'y': '40500.000', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '4107.556', 'y': '40500.000', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '4929.066', 'y': '40500.000', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '4929.066', 'y': '40500.000', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '5750.578', 'y': '40500.000', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '5750.578', 'y': '40500.000', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '6572.089', 'y': '40500.000', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '6572.089', 'y': '40500.000', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '7393.600', 'y': '40500.000', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '7393.600', 'y': '40500.000', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '8215.111', 'y': '40500.000', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '8215.111', 'y': '40500.000', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '9036.622', 'y': '40500.000', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '9036.622', 'y': '40500.000', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '13965.688', 'y': '40500.000', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '13965.688', 'y': '40500.000', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '2464.533', 'y': '56930.223', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '2464.533', 'y': '56930.223', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '3286.044', 'y': '56930.223', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '3286.044', 'y': '56930.223', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '4107.556', 'y': '56930.223', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '4107.556', 'y': '56930.223', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '4929.066', 'y': '56930.223', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '4929.066', 'y': '56930.223', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '5750.578', 'y': '56930.223', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '5750.578', 'y': '56930.223', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '6572.089', 'y': '56930.223', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '6572.089', 'y': '56930.223', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '7393.600', 'y': '56930.223', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '7393.600', 'y': '56930.223', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '8215.111', 'y': '56930.223', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '8215.111', 'y': '56930.223', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '9036.622', 'y': '56930.223', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '9036.622', 'y': '56930.223', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '11501.155', 'y': '42964.531', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '11501.155', 'y': '42964.531', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '11501.155', 'y': '43786.043', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '11501.155', 'y': '43786.043', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '11501.155', 'y': '44607.555', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '11501.155', 'y': '44607.555', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '11501.155', 'y': '54465.688', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '11501.155', 'y': '54465.688', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '9036.622', 'y': '52001.156', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '9036.622', 'y': '52001.156', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '11501.155', 'y': '49536.621', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '11501.155', 'y': '49536.621', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '2464.533', 'y': '47072.090', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '2464.533', 'y': '47072.090', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '3286.044', 'y': '47072.090', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '3286.044', 'y': '47072.090', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '4107.556', 'y': '47072.090', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '4107.556', 'y': '47072.090', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '2464.533', 'y': '52001.156', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '2464.533', 'y': '52001.156', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '3286.044', 'y': '52001.156', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '3286.044', 'y': '52001.156', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '4107.556', 'y': '52001.156', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '4107.556', 'y': '52001.156', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '9036.622', 'y': '47072.090', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '9036.622', 'y': '47072.090', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '6572.089', 'y': '49536.621', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '6572.089', 'y': '49536.621', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '16430.223', 'y': '56930.223', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '16430.223', 'y': '56930.223', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '16430.223', 'y': '56930.223', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '16430.223', 'y': '56930.223', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '16430.223', 'y': '40500.000', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '16430.223', 'y': '40500.000', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '16430.223', 'y': '40500.000', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '16430.223', 'y': '40500.000', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '11501.155', 'y': '40500.000', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '11501.155', 'y': '40500.000', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '11501.155', 'y': '40500.000', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '11501.155', 'y': '40500.000', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '11501.155', 'y': '56930.223', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '11501.155', 'y': '56930.223', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '11501.155', 'y': '56930.223', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '11501.155', 'y': '56930.223', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '11501.155', 'y': '52001.156', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '11501.155', 'y': '52001.156', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '11501.155', 'y': '52001.156', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '11501.155', 'y': '52001.156', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '11501.155', 'y': '47072.090', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '11501.155', 'y': '47072.090', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '11501.155', 'y': '47072.090', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '11501.155', 'y': '47072.090', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '6572.089', 'y': '52001.156', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '6572.089', 'y': '52001.156', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '6572.089', 'y': '52001.156', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '6572.089', 'y': '52001.156', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '6572.089', 'y': '47072.090', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '6572.089', 'y': '47072.090', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '6572.089', 'y': '47072.090', 'z': '-1000.000'
+        }
+    },
+    {'name': 'StaticMeshComponent0', 'label': 'Sidewalks', 'location': {'x': '6572.089', 'y': '47072.090', 'z': '-1000.000'
+        }
+    }
+]

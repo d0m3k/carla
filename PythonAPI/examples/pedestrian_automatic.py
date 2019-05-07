@@ -733,7 +733,6 @@ def game_loop(args):
 
         # throttle=1, steer=0.283796, brake=0, hand_brake=False, reverse=False, manual_gear_shift=False, gear=0
         c = world.player.get_control()
-        print("%s" % control)
         if control.brake>0 or control.hand_brake:
             c.speed = 0
         else:

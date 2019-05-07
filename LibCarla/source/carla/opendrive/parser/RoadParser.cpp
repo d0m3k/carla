@@ -248,8 +248,7 @@ namespace parser {
     }
 
     // test print
-    /*
-       printf("Roads: %d\n", roads.size());
+       printf("Roads: %lu\n", roads.size());
        for (auto const r : roads) {
        printf("Road: %d\n", r.id);
        printf("  Name: %s\n", r.name.c_str());
@@ -257,28 +256,26 @@ namespace parser {
        printf("  JunctionId: %d\n", r.junction_id);
        printf("  Predecessor: %d\n", r.predecessor);
        printf("  Successor: %d\n", r.successor);
-       printf("  Speed: %d\n", r.speed.size());
+       printf("  Speed: %lu\n", r.speed.size());
        for (auto const s : r.speed) {
         printf("    S offset: %e\n", s.s);
         printf("    Type: %s\n", s.type.c_str());
         printf("    Max: %e\n", s.max);
         printf("    Unit: %s\n", s.unit.c_str());
        }
-       printf("LaneSections: %d\n", r.sections.size());
+       printf("LaneSections: %lu\n", r.sections.size());
        for (auto const s : r.sections) {
         printf("    S offset: %e\n", s.s);
-        printf("    a,b,c,d: %e,%e,%e,%e\n", s.a, s.b, s.c, s.d);
-        printf("    Lanes: %d\n", s.lanes.size());
+        printf("    Lanes: %lu\n", s.lanes.size());
         for (auto const l : s.lanes) {
           printf("      Id: %d\n", l.id);
-          printf("      Type: %s\n", l.type.c_str());
+          printf("      Type: %u\n", l.type);
           printf("      Level: %d\n", l.level);
           printf("      Predecessor: %d\n", l.predecessor);
           printf("      Successor: %d\n", l.successor);
         }
        }
        }
-     */
 
     // map_builder calls
     for (auto const r : roads) {
