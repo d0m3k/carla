@@ -144,7 +144,7 @@ namespace road {
       uint32_t lane_type) const {
     // max_nearests represents the max nearests roads
     // where we will search for nearests lanes
-    constexpr size_t max_nearests = 50u;
+    constexpr size_t max_nearests = 500u;
     // in case that map has less than max_nearests lanes,
     // we will use the maximum lanes
     const size_t max_nearest_allowed = std::min(_data.GetRoadCount(), max_nearests);

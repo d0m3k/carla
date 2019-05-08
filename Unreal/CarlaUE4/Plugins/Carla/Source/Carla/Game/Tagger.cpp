@@ -14,6 +14,8 @@
 #include "EngineUtils.h"
 #include "PhysicsEngine/PhysicsAsset.h"
 
+#include "FileHelper.h"
+
 template <typename T>
 static auto CastEnum(T label)
 {
@@ -68,13 +70,30 @@ void ATagger::TagActor(const AActor &Actor, bool bTagForSemanticSegmentation)
   // Iterate static meshes.
   TArray<UStaticMeshComponent *> StaticMeshComponents;
   Actor.GetComponents<UStaticMeshComponent>(StaticMeshComponents);
+  TArray<FString> ToSave;
+  if (!FFileHelper::LoadFileToStringArray(ToSave, *FString::Printf(TEXT("savedWalksides")))) {
+        UE_LOG(LogCarla, Error, TEXT("Failed to load coords array"));
+  }
   for (UStaticMeshComponent *Component : StaticMeshComponents) {
     const auto Label = GetLabelByPath(Component->GetStaticMesh());
     SetStencilValue(*Component, Label, bTagForSemanticSegmentation);
+    if (Label == ECityObjectLabel::Sidewalks) {
+        ToSave.Add(Component->GetName());
+//        FVector Orgin;
+//        FVector BoundsExtent;
+//        Actor.GetActorBounds(false, Orgin, BoundsExtent);
+        FVector Vector = Component->GetStaticMesh()->GetBoundingBox().GetCenter();
+        FString CoordinateString = FString::Printf(TEXT("Character Position is %s and Bounds are %s"), *Vector.ToCompactString(), *Vector.ToCompactString());
+        ToSave.Add(CoordinateString);
+    }
 #ifdef CARLA_TAGGER_EXTRA_LOG
     UE_LOG(LogCarla, Log, TEXT("  + StaticMeshComponent: %s"), *Component->GetName());
     UE_LOG(LogCarla, Log, TEXT("    - Label: \"%s\""), *GetTagAsString(Label));
 #endif // CARLA_TAGGER_EXTRA_LOG
+  }
+  UE_LOG(LogCarla, Log, TEXT("SAVING ARRAY %d"), ToSave.Num());
+  if (ToSave.Num()>0  && !FFileHelper::SaveStringArrayToFile(ToSave, *FString::Printf(TEXT("savedWalksides")))) {
+    UE_LOG(LogCarla, Error, TEXT("Failed to save coords array"));
   }
 
   // Iterate skeletal meshes.
