@@ -12,9 +12,10 @@
 #include "Carla/Util/RandomEngine.h"
 #include "Carla/Vehicle/VehicleSpawnPoint.h"
 
-#include "EngineUtils.h"
 #include "Engine/StaticMeshActor.h"
+#include "EngineUtils.h"
 #include "GameFramework/SpectatorPawn.h"
+#include "GameFramework/SpringArmComponent.h"
 #include "Kismet/GameplayStatics.h"
 
 static FString UCarlaEpisode_GetTrafficSignId(ETrafficSignState State)
@@ -139,8 +140,36 @@ void UCarlaEpisode::AttachActors(AActor *Child, AActor *Parent)
 {
   check(Child != nullptr);
   check(Parent != nullptr);
-  Child->AttachToActor(Parent, FAttachmentTransformRules::KeepRelativeTransform);
-  Child->SetOwner(Parent);
+  // Child->AttachToActor(Parent, FAttachmentTransformRules::KeepRelativeTransform);
+  // Child->SetOwner(Parent);
+
+  auto SpringArm = NewObject<USpringArmComponent>(Parent);
+  // ActorHolder.Add(SpringArm);
+  SpringArm->TargetOffset = FVector(0.f, 0.f, 200.f);
+  SpringArm->SetRelativeRotation(FRotator(-15.f, 0.f, 0.f));
+  SpringArm->SetupAttachment(Parent->GetRootComponent());
+  SpringArm->TargetArmLength = 650.0f;
+  SpringArm->bEnableCameraRotationLag = true;
+  SpringArm->CameraRotationLagSpeed = 7.f;
+  SpringArm->bInheritPitch = false;
+  SpringArm->bInheritRoll = false;
+  SpringArm->bInheritYaw = true;
+  SpringArm->bDoCollisionTest = false;
+
+  SpringArm->AttachToComponent(
+      Parent->GetRootComponent(),
+      FAttachmentTransformRules::KeepRelativeTransform);
+  SpringArm->RegisterComponent();
+
+  auto ChildComp = NewObject<UChildActorComponent>(Parent);
+  // ActorHolder.Add(ChildComp);
+  ChildComp->SetupAttachment(
+      SpringArm,
+      USpringArmComponent::SocketName);
+  Child->AttachToComponent(
+      ChildComp,
+      FAttachmentTransformRules::KeepRelativeTransform);
+  ChildComp->RegisterComponent();
 
   // recorder event
   if (Recorder->IsEnabled())
