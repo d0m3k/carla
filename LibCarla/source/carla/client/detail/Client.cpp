@@ -188,11 +188,20 @@ namespace detail {
   rpc::Actor Client::SpawnActorWithParent(
       const rpc::ActorDescription &description,
       const geom::Transform &transform,
-      rpc::ActorId parent) {
+      rpc::ActorId parent,
+      rpc::AttachmentType attachment_type) {
     return _pimpl->CallAndWait<rpc::Actor>("spawn_actor_with_parent",
         description,
         transform,
-        parent);
+        parent,
+        attachment_type);
+  }
+
+  void Client::AttachActors(
+      rpc::ActorId child,
+      rpc::ActorId parent,
+      rpc::AttachmentType attachment_type) {
+    return _pimpl->AsyncCall("attach_actors", child, parent, attachment_type);
   }
 
   bool Client::DestroyActor(rpc::ActorId actor) {

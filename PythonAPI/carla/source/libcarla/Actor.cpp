@@ -67,6 +67,7 @@ void export_actor() {
       }
       return atttribute_dict;
     })
+    .def("attach_to", &cc::Actor::AttachTo)
     .def("get_world", CALL_RETURNING_COPY(cc::Actor, GetWorld))
     .def("get_location", &cc::Actor::GetLocation)
     .def("get_transform", &cc::Actor::GetTransform)

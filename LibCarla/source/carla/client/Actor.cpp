@@ -12,6 +12,10 @@
 namespace carla {
 namespace client {
 
+  void Actor::AttachTo(Actor &parent, rpc::AttachmentType attachment_type) {
+    GetEpisode().Lock()->AttachActors(*this, parent, attachment_type);
+  }
+
   geom::Location Actor::GetLocation() const {
     return GetEpisode().Lock()->GetActorLocation(*this);
   }

@@ -10,6 +10,7 @@
 #include "carla/MsgPackAdaptors.h"
 #include "carla/geom/Transform.h"
 #include "carla/rpc/ActorId.h"
+#include "carla/rpc/AttachmentType.h"
 #include "carla/rpc/VehicleControl.h"
 #include "carla/rpc/WalkerControl.h"
 

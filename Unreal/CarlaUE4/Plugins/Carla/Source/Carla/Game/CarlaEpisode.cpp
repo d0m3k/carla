@@ -136,40 +136,12 @@ carla::rpc::Actor UCarlaEpisode::SerializeActor(FActorView ActorView) const
   return Actor;
 }
 
-void UCarlaEpisode::AttachActors(AActor *Child, AActor *Parent)
+void UCarlaEpisode::AttachActors(
+    AActor *Child,
+    AActor *Parent,
+    EAttachmentType InAttachmentType)
 {
-  check(Child != nullptr);
-  check(Parent != nullptr);
-  // Child->AttachToActor(Parent, FAttachmentTransformRules::KeepRelativeTransform);
-  // Child->SetOwner(Parent);
-
-  auto SpringArm = NewObject<USpringArmComponent>(Parent);
-  // ActorHolder.Add(SpringArm);
-  SpringArm->TargetOffset = FVector(0.f, 0.f, 200.f);
-  SpringArm->SetRelativeRotation(FRotator(-15.f, 0.f, 0.f));
-  SpringArm->SetupAttachment(Parent->GetRootComponent());
-  SpringArm->TargetArmLength = 650.0f;
-  SpringArm->bEnableCameraRotationLag = true;
-  SpringArm->CameraRotationLagSpeed = 7.f;
-  SpringArm->bInheritPitch = false;
-  SpringArm->bInheritRoll = false;
-  SpringArm->bInheritYaw = true;
-  SpringArm->bDoCollisionTest = false;
-
-  SpringArm->AttachToComponent(
-      Parent->GetRootComponent(),
-      FAttachmentTransformRules::KeepRelativeTransform);
-  SpringArm->RegisterComponent();
-
-  auto ChildComp = NewObject<UChildActorComponent>(Parent);
-  // ActorHolder.Add(ChildComp);
-  ChildComp->SetupAttachment(
-      SpringArm,
-      USpringArmComponent::SocketName);
-  Child->AttachToComponent(
-      ChildComp,
-      FAttachmentTransformRules::KeepRelativeTransform);
-  ChildComp->RegisterComponent();
+  UActorAttacher::AttachActors(Child, Parent, InAttachmentType);
 
   // recorder event
   if (Recorder->IsEnabled())

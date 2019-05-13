@@ -664,9 +664,8 @@ class CameraManager(object):
         self.hud = hud
         self.recording = False
         self._camera_transforms = [
-            carla.Transform(),
-            carla.Transform(carla.Location(x=-5.5, z=2.8), carla.Rotation(pitch=-15)),
-            carla.Transform(carla.Location(x=1.6, z=1.7))]
+            (carla.Transform(carla.Location(x=-5.5, z=2.8), carla.Rotation(pitch=-15)), carla.AttachmentType.SpringArm),
+            (carla.Transform(carla.Location(x=1.6, z=1.7)), carla.AttachmentType.Rigid)]
         self.transform_index = 1
         self.sensors = [
             ['sensor.camera.rgb', cc.Raw, 'Camera RGB'],
@@ -691,7 +690,15 @@ class CameraManager(object):
 
     def toggle_camera(self):
         self.transform_index = (self.transform_index + 1) % len(self._camera_transforms)
-        self.sensor.set_transform(self._camera_transforms[self.transform_index])
+        # index = int(self.index)
+        # self.index = None
+        # self.set_sensor(index, notify=False)
+        attachment = self._camera_transforms[self.transform_index]
+        self.sensor.set_transform(attachment[0])
+        self._parent.get_world().wait_for_tick()
+        self._parent.get_world().wait_for_tick()
+        self._parent.get_world().wait_for_tick()
+        self.sensor.attach_to(self._parent, attachment[1])
 
     def set_sensor(self, index, notify=True):
         index = index % len(self.sensors)
@@ -703,8 +710,9 @@ class CameraManager(object):
                 self.surface = None
             self.sensor = self._parent.get_world().spawn_actor(
                 self.sensors[index][-1],
-                self._camera_transforms[self.transform_index],
-                attach_to=self._parent)
+                self._camera_transforms[self.transform_index][0],
+                attach_to=self._parent,
+                attachment_type=self._camera_transforms[self.transform_index][1])
             # We need to pass the lambda a weak reference to self to avoid
             # circular reference.
             weak_self = weakref.ref(self)

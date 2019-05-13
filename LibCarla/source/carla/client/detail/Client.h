@@ -107,9 +107,15 @@ namespace detail {
     rpc::Actor SpawnActorWithParent(
         const rpc::ActorDescription &description,
         const geom::Transform &transform,
-        rpc::ActorId parent);
+        rpc::ActorId parent,
+        rpc::AttachmentType attachment_type);
 
     bool DestroyActor(rpc::ActorId actor);
+
+    void AttachActors(
+        rpc::ActorId child,
+        rpc::ActorId parent,
+        rpc::AttachmentType attachment_type);
 
     void SetActorLocation(
         rpc::ActorId actor,

@@ -10,6 +10,7 @@
 #include "carla/Memory.h"
 #include "carla/client/detail/ActorState.h"
 #include "carla/profiler/LifetimeProfiled.h"
+#include "carla/rpc/AttachmentType.h"
 
 namespace carla {
 namespace client {
@@ -27,6 +28,11 @@ namespace client {
         Super(std::move(init)) {}
 
     virtual ~Actor() = default;
+
+    /// Attach this actor to @a parent.
+    void AttachTo(
+        Actor &parent,
+        rpc::AttachmentType attachment_type = rpc::AttachmentType::Rigid);
 
     /// Return the current location of the actor.
     ///
