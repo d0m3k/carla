@@ -66,7 +66,9 @@ namespace road {
       FuncT &&func) {
     for (const auto &pair : lane_section.GetLanes()) {
       const auto &lane = pair.second;
-      if ((static_cast<uint32_t>(lane.GetType()) & static_cast<uint32_t>(Lane::LaneType::Driving)) > 0) {
+      if (((static_cast<uint32_t>(lane.GetType()) & static_cast<uint32_t>(Lane::LaneType::Driving)) > 0)
+       || (static_cast<uint32_t>(lane.GetType()) & static_cast<uint32_t>(Lane::LaneType::Sidewalk)) > 0
+       ) {
         std::forward<FuncT>(func)(Waypoint{
             road_id,
             lane_section.GetId(),
@@ -144,7 +146,7 @@ namespace road {
       uint32_t lane_type) const {
     // max_nearests represents the max nearests roads
     // where we will search for nearests lanes
-    constexpr size_t max_nearests = 500u;
+    constexpr size_t max_nearests = 50u;
     // in case that map has less than max_nearests lanes,
     // we will use the maximum lanes
     const size_t max_nearest_allowed = std::min(_data.GetRoadCount(), max_nearests);
@@ -479,7 +481,7 @@ namespace road {
       for (const auto &lane_section : road.GetLaneSectionsAt(0.0)) {
         for (const auto &lane : lane_section.GetLanes()) {
           // add only the right (negative) lanes
-          if (lane.first < 0 && lane.second.GetType() == Lane::LaneType::Driving) {
+          if (lane.first < 0 && (lane.second.GetType() == Lane::LaneType::Driving || lane.second.GetType() == Lane::LaneType::Sidewalk)) {
             result.emplace_back(Waypoint{ road.GetId(), lane_section.GetId(), lane.second.GetId(), 0.0 });
           }
         }
@@ -489,7 +491,7 @@ namespace road {
       for (const auto &lane_section : road.GetLaneSectionsAt(road_len)) {
         for (const auto &lane : lane_section.GetLanes()) {
           // add only the left (positive) lanes
-          if (lane.first > 0 && lane.second.GetType() == Lane::LaneType::Driving) {
+          if (lane.first > 0 && (lane.second.GetType() == Lane::LaneType::Driving  || lane.second.GetType() == Lane::LaneType::Sidewalk)) {
             result.emplace_back(Waypoint{ road.GetId(), lane_section.GetId(), lane.second.GetId(), road_len });
           }
         }

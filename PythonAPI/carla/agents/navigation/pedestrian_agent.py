@@ -52,7 +52,7 @@ class PedestrianAgent(Agent):
         based on the route returned by the global router
         """
         start_waypoint = self._map.get_waypoint(self._vehicle.get_location())
-        print("%s" % list(map(lambda x: x[0].lane_type, self._map.get_topology())))
+        print("%s" % list(map(lambda x: list(map(lambda y: y.lane_type, x)), self._map.get_topology())))
         end_waypoint = self._map.get_waypoint(carla.Location(location[0], location[1], location[2]), project_to_road=False, lane_type=carla.LaneType.Sidewalk)
 
         print("%s, %s" % (start_waypoint, end_waypoint))
